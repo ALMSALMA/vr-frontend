@@ -1,0 +1,1535 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bigscreen</title>
+    <meta name="description" content="Enjoy Your Favorite Media in VR" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta property="og:site_name" content="Bigscreen" />
+    <meta
+      content="Enjoy Your Favorite Media in VR | Bigscreen"
+      property="og:title"
+    />
+    <meta
+      property="og:description"
+      content="Bigscreen is your virtual hotspot where you can hang out with friends, collaborate with coworkers, play games, watch movies &amp; much more."
+    />
+    <meta property="og:image" content="/embed-card.png" />
+    <meta property="og:type" content="website" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @font-face {
+        font-family: SFProDisplay-Bold;
+        src: url(/fonts/SFProDisplay-Bold.woff2) format("woff2"),
+          url(/fonts/SFProDisplay-Bold.woff) format("woff");
+      }
+    </style>
+    <style>
+      .stake-area[_ngcontent-kib-c29] {
+        position: relative;
+      }
+      .stake-area[_ngcontent-kib-c29] .take-shape[_ngcontent-kib-c29] {
+        top: 0;
+        left: 0;
+        position: absolute;
+      }
+      .stake-bg[_ngcontent-kib-c29] {
+        background: linear-gradient(135deg, #3a285c 0%, #1a093a 100%);
+        border-radius: 30px;
+        position: relative;
+        z-index: 1;
+      }
+      .stake-bg[_ngcontent-kib-c29] .page-star[_ngcontent-kib-c29] {
+        right: 0;
+        left: 200px;
+        z-index: -1;
+        margin: auto;
+        bottom: 100px;
+        position: absolute;
+        animation: rotation 30s infinite linear;
+      }
+      .stake-bg[_ngcontent-kib-c29] .stake-content[_ngcontent-kib-c29] {
+        padding: 100px 90px;
+      }
+      .stake-bg[_ngcontent-kib-c29]
+        .stake-content[_ngcontent-kib-c29]
+        .top-title[_ngcontent-kib-c29] {
+        margin-bottom: 15px;
+        letter-spacing: 0.1em;
+        display: inline-block;
+        color: var(--primaryColor);
+        background: linear-gradient(
+          90.99deg,
+          #fdce39 0.27%,
+          #fd8963 30%,
+          #ed5174 98.69%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-family: var(--headingFontFamily);
+        font-weight: 600;
+      }
+      .stake-bg[_ngcontent-kib-c29]
+        .stake-content[_ngcontent-kib-c29]
+        h2[_ngcontent-kib-c29] {
+        font-size: 50px;
+        margin-bottom: 25px;
+      }
+      .stake-bg[_ngcontent-kib-c29]
+        .stake-content[_ngcontent-kib-c29]
+        h2[_ngcontent-kib-c29]
+        span[_ngcontent-kib-c29] {
+        color: var(--primaryColor);
+      }
+      .stake-bg[_ngcontent-kib-c29]
+        .stake-content[_ngcontent-kib-c29]
+        p[_ngcontent-kib-c29] {
+        color: #beb8cc;
+      }
+      .stake-bg[_ngcontent-kib-c29]
+        .stake-content[_ngcontent-kib-c29]
+        .default-btn[_ngcontent-kib-c29] {
+        margin-top: 15px;
+      }
+      .stake-bg[_ngcontent-kib-c29] .stake-image[_ngcontent-kib-c29] {
+        position: relative;
+        text-align: center;
+        z-index: 1;
+        margin: 0 -50px;
+      }
+      .stake-bg[_ngcontent-kib-c29] .stake-image[_ngcontent-kib-c29]:before {
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        content: "";
+        opacity: 0.1;
+        width: 350px;
+        height: 350px;
+        position: relative;
+        border-radius: 50%;
+        background: var(--whiteColor);
+      }
+      @media only screen and (max-width: 767px) {
+        .stake-area[_ngcontent-kib-c29] .take-shape[_ngcontent-kib-c29] {
+          display: none;
+        }
+        .stake-bg[_ngcontent-kib-c29] {
+          border-radius: 10px;
+          padding: 60px 15px 0;
+        }
+        .stake-bg[_ngcontent-kib-c29] .page-star[_ngcontent-kib-c29] {
+          display: none;
+        }
+        .stake-bg[_ngcontent-kib-c29] .stake-content[_ngcontent-kib-c29] {
+          padding: 0;
+          text-align: center;
+        }
+        .stake-bg[_ngcontent-kib-c29]
+          .stake-content[_ngcontent-kib-c29]
+          .top-title[_ngcontent-kib-c29] {
+          margin-bottom: 10px;
+        }
+        .stake-bg[_ngcontent-kib-c29]
+          .stake-content[_ngcontent-kib-c29]
+          h2[_ngcontent-kib-c29] {
+          font-size: 28px;
+          margin-bottom: 12px;
+        }
+        .stake-bg[_ngcontent-kib-c29]
+          .stake-content[_ngcontent-kib-c29]
+          .default-btn[_ngcontent-kib-c29] {
+          margin-top: 0;
+        }
+        .stake-bg[_ngcontent-kib-c29] .stake-image[_ngcontent-kib-c29] {
+          margin-top: 30px;
+        }
+        .stake-bg[_ngcontent-kib-c29] .stake-image[_ngcontent-kib-c29]:before {
+          display: none;
+        }
+      }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .stake-area[_ngcontent-kib-c29] .take-shape[_ngcontent-kib-c29] {
+          display: none;
+        }
+        .stake-bg[_ngcontent-kib-c29] {
+          padding: 80px 50px 0;
+        }
+        .stake-bg[_ngcontent-kib-c29] .page-star[_ngcontent-kib-c29] {
+          display: none;
+        }
+        .stake-bg[_ngcontent-kib-c29] .stake-content[_ngcontent-kib-c29] {
+          padding: 0;
+          text-align: center;
+        }
+        .stake-bg[_ngcontent-kib-c29]
+          .stake-content[_ngcontent-kib-c29]
+          .top-title[_ngcontent-kib-c29] {
+          margin-bottom: 12px;
+        }
+        .stake-bg[_ngcontent-kib-c29]
+          .stake-content[_ngcontent-kib-c29]
+          h2[_ngcontent-kib-c29] {
+          font-size: 40px;
+          margin-bottom: 12px;
+        }
+        .stake-bg[_ngcontent-kib-c29]
+          .stake-content[_ngcontent-kib-c29]
+          .default-btn[_ngcontent-kib-c29] {
+          margin-top: 5px;
+        }
+        .stake-bg[_ngcontent-kib-c29] .stake-image[_ngcontent-kib-c29] {
+          margin-top: 30px;
+        }
+        .stake-bg[_ngcontent-kib-c29] .stake-image[_ngcontent-kib-c29]:before {
+          margin: auto;
+        }
+      }
+      @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        .stake-bg[_ngcontent-kib-c29] {
+          padding-right: 35px;
+        }
+        .stake-bg[_ngcontent-kib-c29] .stake-content[_ngcontent-kib-c29] {
+          padding: 100px 50px;
+        }
+        .stake-bg[_ngcontent-kib-c29]
+          .stake-content[_ngcontent-kib-c29]
+          .top-title[_ngcontent-kib-c29] {
+          margin-bottom: 15px;
+        }
+        .stake-bg[_ngcontent-kib-c29]
+          .stake-content[_ngcontent-kib-c29]
+          h2[_ngcontent-kib-c29] {
+          font-size: 48px;
+          margin-bottom: 15px;
+        }
+        .stake-bg[_ngcontent-kib-c29]
+          .stake-content[_ngcontent-kib-c29]
+          .default-btn[_ngcontent-kib-c29] {
+          margin-top: 10px;
+        }
+        .stake-bg[_ngcontent-kib-c29] .stake-image[_ngcontent-kib-c29]:before {
+          display: none;
+        }
+      }
+      @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+        .stake-bg[_ngcontent-kib-c29] {
+          padding-right: 35px;
+        }
+        .stake-bg[_ngcontent-kib-c29] .stake-content[_ngcontent-kib-c29] {
+          padding: 100px 60px;
+        }
+        .stake-bg[_ngcontent-kib-c29] .stake-image[_ngcontent-kib-c29]:before {
+          width: 300px;
+          height: 300px;
+        }
+      }
+    </style>
+    <link href="/style/main.css" rel="stylesheet" />
+    <script src="https://js.stripe.com/v3"></script>
+  </head>
+  <body>
+    <!-- This is the modal content of youtube -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content bg-transparent">
+          <div class="modal-body text-center">
+            <iframe
+              width="1024"
+              height="576"
+              src="https://www.youtube.com/embed/Ll4d3Iv3s5s"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End the modal content of youtube -->
+
+    <div class="Page_page__So1SB">
+      <header class="Header_header__JleW2">
+        <div class="container Header_container__1zVrb">
+          <a class="Header_logo__3Yyyg" href="/"
+            ><img src="/images/logos/bigscreen.svg" alt="Bigscreen"
+          /></a>
+          <div class="Header_wrap__24ZzR">
+            <div>
+              <nav class="Header_nav__1HdCt">
+                <a
+                  class="Header_link__wrNJ6"
+                  href="#"
+                  style="
+                    background: linear-gradient(
+                      270deg,
+                      #3772ff,
+                      #9757d7
+                    ) !important;
+                  "
+                  >Rent Movies</a
+                >
+              </nav>
+              <div class="Header_details__1n4WY">
+                <div class="Header_socials__36SRu">
+                  <a
+                    class="Header_social__1rKiS"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><svg class="" width="19" height="19" viewBox="0 0 16 16">
+                      <path
+                        d="M2.121 9.233C1.018 9.236.306 10.492.986 11.444c.973 1.363 2.737 2.456 5.681 2.456 4.563 0 8.226-3.719 7.714-8.113l.751-1.503c.521-1.042-.384-2.227-1.527-1.999l-.993.198c-.263-.139-.535-.244-.768-.32-.454-.148-1.003-.265-1.511-.265-.913 0-1.701.234-2.327.704-.619.464-.968 1.075-1.159 1.635-.088.258-.147.518-.185.766-.354-.111-.715-.261-1.069-.445-.802-.415-1.451-.942-1.817-1.404-.614-.775-1.915-.717-2.371.29-.643 1.42-.467 3.102.111 4.462a6.57 6.57 0 0 0 .754 1.324l-.151.001zm4.546 3.333c-2.576 0-3.907-.933-4.596-1.898-.031-.043 0-.102.054-.103.701-.002 2.139-.035 3.087-.59.049-.029.038-.101-.016-.119-2.211-.743-3.467-3.891-2.575-5.86.02-.045.081-.051.112-.012C3.752 5.271 5.98 6.531 7.919 6.566c.042.001.074-.037.067-.079-.078-.507-.376-3.254 2.347-3.254.65 0 1.618.317 1.974.642a.07.07 0 0 0 .061.017l1.498-.3c.054-.011.098.046.073.095l-.929 1.858c-.006.013-.008.028-.006.042.651 3.658-2.345 6.978-6.337 6.978z"
+                      ></path></svg></a
+                  ><a
+                    class="Header_social__1rKiS"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><svg class="" width="21" height="21" viewBox="0 0 16 16">
+                      <g transform="translate(0 2.5), scale(0.7)">
+                        <path
+                          id="Vector"
+                          d="M11,15c-3.293,0-5.961-.126-7.619-.231A3.432,3.432,0,0,1,.187,11.544C.063,9.911,0,8.55,0,7.5S.063,5.089.187,3.456A3.433,3.433,0,0,1,3.381.23C5.8.078,8.365,0,11,0c2.6,0,5.233.08,7.62.23a3.432,3.432,0,0,1,3.193,3.226C21.937,5.1,22,6.457,22,7.5s-.063,2.4-.188,4.044a3.43,3.43,0,0,1-3.193,3.225C16.961,14.874,14.293,15,11,15ZM11,1.875c-3.242,0-5.871.123-7.506.227A1.593,1.593,0,0,0,2.015,3.6c-.121,1.587-.182,2.9-.182,3.9s.061,2.312.182,3.9a1.592,1.592,0,0,0,1.478,1.5c2.387.151,4.912.228,7.506.228s5.12-.077,7.506-.228a1.593,1.593,0,0,0,1.479-1.5c.083-1.085.181-2.642.181-3.9s-.1-2.813-.181-3.9a1.594,1.594,0,0,0-1.479-1.5C16.871,2,14.242,1.875,11,1.875Z"
+                        ></path>
+                        <path
+                          id="Vector-2"
+                          d="M4.356,2.109a.917.917,0,0,1,0,1.525L1.425,5.589A.917.917,0,0,1,0,4.826V.918A.917.917,0,0,1,1.425.155Z"
+                          transform="translate(9.167 4.128)"
+                        ></path>
+                      </g></svg></a
+                  ><a
+                    class="Header_social__1rKiS"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><svg class="" width="22" height="22" viewBox="0 0 16 16">
+                      <g transform="translate(4 1), scale(0.7)">
+                        <path
+                          id="Vector"
+                          d="M5.526,17.438c-5.1,0-9.243-2.767-9.243-6.167a4.17,4.17,0,0,1,.058-.7A2.344,2.344,0,0,1-4.771,8.581,2.345,2.345,0,0,1-2.429,6.239a2.336,2.336,0,0,1,1.552.588A11.89,11.89,0,0,1,5.261,5.105L6.823.339l.341.08.008,0,3.64.857a1.929,1.929,0,1,1-.154.758L7.337,1.254,6.072,5.114a11.763,11.763,0,0,1,5.908,1.745,2.342,2.342,0,1,1,2.739,3.762,4.172,4.172,0,0,1,.051.65c0,3.4-4.148,6.167-9.244,6.167Zm-8.393-6.9a3.5,3.5,0,0,0-.077.731c0,2.975,3.8,5.394,8.471,5.394S14,14.245,14,11.271a3.48,3.48,0,0,0-.071-.7.388.388,0,0,1-.038-.168,4.922,4.922,0,0,0-1.982-2.679.383.383,0,0,1-.166-.117A11.124,11.124,0,0,0,5.526,5.876a11.16,11.16,0,0,0-6.168,1.7A.4.4,0,0,1-.8,7.684a4.969,4.969,0,0,0-2.032,2.695.383.383,0,0,1-.032.148A.121.121,0,0,1-2.867,10.54ZM12.626,7.325a5.771,5.771,0,0,1,1.89,2.507,1.57,1.57,0,0,0-1.89-2.507ZM-2.429,7.011A1.571,1.571,0,0,0-4,8.581a1.571,1.571,0,0,0,.555,1.2A5.833,5.833,0,0,1-1.532,7.293,1.571,1.571,0,0,0-2.429,7.011ZM12.586.877a1.156,1.156,0,1,0,1.155,1.156A1.157,1.157,0,0,0,12.586.877ZM5.568,15.238A4.53,4.53,0,0,1,2.235,14.2a.386.386,0,0,1,.547-.546,3.837,3.837,0,0,0,2.786.807,3.842,3.842,0,0,0,2.787-.807A.386.386,0,1,1,8.9,14.2a4.532,4.532,0,0,1-3.333,1.034Z"
+                          transform="translate(0)"
+                          stroke="#777e90"
+                          stroke-width="0.7"
+                        ></path>
+                        <path
+                          id="Vector-2"
+                          d="M17.884,22.35A1.464,1.464,0,0,0,16.436,23.8a1.445,1.445,0,0,0,1.449,1.425A1.425,1.425,0,0,0,19.309,23.8a1.444,1.444,0,0,0-1.425-1.447Zm-6.243,0A1.463,1.463,0,0,0,10.194,23.8a1.444,1.444,0,0,0,1.447,1.425A1.425,1.425,0,0,0,13.066,23.8a1.444,1.444,0,0,0-1.425-1.447Z"
+                          transform="translate(-9.183 -13.65)"
+                        ></path>
+                      </g></svg
+                  ></a>
+                </div>
+                <a
+                  class="button-stroke button-small Header_button__2u-UY"
+                  href="#"
+                  >Login</a
+                >
+              </div>
+            </div>
+          </div>
+          <a class="button button-small Header_button__2u-UY" href="#"
+            >Rent Movies</a
+          ><a class="button-stroke button-small Header_button__2u-UY" href="#"
+            >Login</a
+          ><button class="Header_burger__3zMno"></button>
+        </div>
+      </header>
+      <div class="Page_inner__2ZM6W">
+        <div class="Hero_hero__2C64G">
+          <div class="Hero_background__16CnU">
+            <iframe
+              class="Hero_video__3kPp9"
+              src="https://www.youtube.com/embed/Ll4d3Iv3s5s?controls=0&amp;autoplay=1&amp;mute=1&amp;playlist=Ll4d3Iv3s5s&amp;loop=1"
+              title="V"
+            ></iframe>
+          </div>
+          <div class="Hero_leftfade__ppKol"></div>
+          <div class="navfade Hero_navfade__2wxVy"></div>
+          <div class="container Hero_container__28I0f">
+            <div
+              class="Hero_wrap__17JQ- animated fadeIn"
+              style="animation-duration: 1s"
+            >
+              <h1 class="h1 Hero_title__2KSQr">
+                Your ultimate virtual reality hangout
+              </h1>
+              <div class="Hero_text__zd6ut">
+                Bigscreen is your virtual hotspot where you can hang out with
+                friends, collaborate with coworkers, play games, watch movies
+                &amp; much more.
+              </div>
+              <div class="Hero_btns__1_jdQ">
+                <button
+                  class="button Hero_button__2-_D3 DownloadMenu_button__20-9V"
+                  style="background: linear-gradient(270deg, #3772ff, #9757d7)"
+                >
+                  Download
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Start the sub nav menus -->
+          <div class="Platforms_container__Cs6X5">
+            <a
+              class="Platforms_community__3GHo8"
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+              >JOIN THE DISCORD
+              <svg
+                class="Platforms_comicon__1R8_A"
+                width="32"
+                height="32"
+                viewBox="0 0 16 16"
+              >
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect
+                      id="Rectangle_1201"
+                      width="27"
+                      height="21"
+                      transform="translate(0 0)"
+                    ></rect>
+                  </clipPath>
+                </defs>
+                <g
+                  transform="translate(0 2), scale(0.5)"
+                  clip-path="url(#clip-path)"
+                >
+                  <path
+                    id="Vector"
+                    d="M21.784,2.038A21.22,21.22,0,0,0,16.546.413a.08.08,0,0,0-.084.04,14.781,14.781,0,0,0-.652,1.34,19.59,19.59,0,0,0-5.883,0A13.557,13.557,0,0,0,9.264.453.083.083,0,0,0,9.18.413,21.161,21.161,0,0,0,3.942,2.038a.075.075,0,0,0-.034.03,21.718,21.718,0,0,0-3.8,14.647.088.088,0,0,0,.033.06,21.339,21.339,0,0,0,6.426,3.248.083.083,0,0,0,.09-.03A15.252,15.252,0,0,0,7.97,17.855a.081.081,0,0,0-.045-.113,14.053,14.053,0,0,1-2.007-.957.083.083,0,0,1-.008-.137c.135-.1.27-.206.4-.312a.08.08,0,0,1,.083-.011,15.218,15.218,0,0,0,12.932,0,.079.079,0,0,1,.084.01c.129.106.264.212.4.313a.082.082,0,0,1-.007.137,13.187,13.187,0,0,1-2.008.956.082.082,0,0,0-.044.114,17.125,17.125,0,0,0,1.314,2.137.082.082,0,0,0,.09.031,21.268,21.268,0,0,0,6.436-3.248.083.083,0,0,0,.033-.059,21.575,21.575,0,0,0-3.8-14.647A.065.065,0,0,0,21.784,2.038ZM8.6,13.791A2.473,2.473,0,0,1,6.286,11.2,2.46,2.46,0,0,1,8.6,8.6,2.446,2.446,0,0,1,10.912,11.2,2.46,2.46,0,0,1,8.6,13.791Zm8.551,0A2.473,2.473,0,0,1,14.837,11.2,2.46,2.46,0,0,1,17.15,8.6,2.446,2.446,0,0,1,19.462,11.2,2.453,2.453,0,0,1,17.15,13.791Z"
+                    transform="translate(0.678 0.804)"
+                  ></path>
+                </g></svg
+            ></a>
+            <div class="Platforms_list__23aJq">
+              <a
+                href="#"
+                target="blank"
+                class="Platforms_logo__1J6ur"
+                style="height: 13.16%"
+                ><img
+                  src="/images/logos/oculus_quest.svg"
+                  alt="oculus quest" /></a
+              ><a
+                href="#"
+                target="blank"
+                class="Platforms_logo__1J6ur"
+                style="height: 13.16%"
+                ><img
+                  src="/images/logos/oculus_rift_s.svg"
+                  alt="oculus rift s" /></a
+              ><a
+                href="https://store.steampowered.com/app/457550/Bigscreen_Beta/"
+                target="blank"
+                class="Platforms_logo__1J6ur"
+                style="height: 18.42%"
+                ><img
+                  src="/images/logos/valve_index.svg"
+                  alt="valve index" /></a
+              ><a
+                href="#"
+                target="blank"
+                class="Platforms_logo__1J6ur"
+                style="height: 17.11%"
+                ><img
+                  src="/images/logos/windowsmr.svg"
+                  alt="windows mixed reality" /></a
+              ><a
+                href="#"
+                target="blank"
+                class="Platforms_logo__1J6ur"
+                style="height: 17.11%"
+                ><img src="/images/logos/htc_vive.svg" alt="htc vive"
+              /></a>
+            </div>
+          </div>
+          <!-- End the sub nav menus -->
+        </div>
+
+        <div class="section Coworking_coworking__2qgav">
+          <!-- New image display -->
+          <div _ngcontent-kib-c29="" class="container">
+            <div _ngcontent-kib-c29="" class="stake-bg">
+              <div _ngcontent-kib-c29="" class="row align-items-end">
+                <div _ngcontent-kib-c29="" class="col-lg-8 col-md-12">
+                  <div
+                    _ngcontent-kib-c29=""
+                    class="stake-content"
+                    style="text-align: left"
+                  >
+                    <span _ngcontent-kib-c29="" class="top-title"
+                      >STAKE MAVE</span
+                    >
+                    <h2 _ngcontent-kib-c29="">Stake Mave To Earn Rewards</h2>
+                    <p _ngcontent-kib-c29="">
+                      A Gamified Marketplace Dedicated To The Metaverse And
+                      Gaming Assets. The Metaverse Marketplace Allows Users To
+                      Trade, Auction, And Rent Virtual Ownership Assets From
+                      Various Metaverse And Gaming Projects.
+                    </p>
+                    <a
+                      _ngcontent-kib-c29=""
+                      routerlink="/projects"
+                      class="default-btn btn-active"
+                      href="#"
+                    >
+                      Stake Mave
+                    </a>
+                  </div>
+                </div>
+                <div _ngcontent-kib-c29="" class="col-lg-4 col-md-12">
+                  <div _ngcontent-kib-c29="" class="stake-image">
+                    <img
+                      _ngcontent-kib-c29=""
+                      src="https://mave-ng.hibootstrap.com/assets/images/stake-img.png"
+                      alt="stake-image"
+                    />
+                  </div>
+                </div>
+              </div>
+              <img
+                _ngcontent-kib-c29=""
+                src="https://mave-ng.hibootstrap.com/assets/images/page-star.png"
+                alt="page-star"
+                class="page-star"
+              />
+            </div>
+          </div>
+          <!-- End new image display -->
+        </div>
+
+        <div class="section Beyond_beyond__3XhSB">
+          <div class="container Beyond_container__b2UYC">
+            <!-- Carousel small cards -->
+            <div
+              id="carouselExampleControlsNoTouching"
+              class="carousel slide"
+              data-bs-touch="false"
+              data-bs-interval="false"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row row-cols-2 row-cols-md-2 g-2">
+                    <div class="col">
+                      <div class="card border-0 bg-transparent">
+                        <h1 class="Beyond_title__3YM1e mb-2">Lorem Ipsum</h1>
+                        <p
+                          class="Beyond_text__1zAai Beyond_feature__hSwFA"
+                          style="text-align: justify"
+                        >
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and
+                          scrambled it to make a type specimen book. It has
+                          survived not only five centuries, but also the leap
+                          into electronic typesetting, remaining essentially
+                          unchanged. It was popularised in the 1960s with the
+                          release of Letraset sheets containing Lorem Ipsum
+                          passages, and more recently with desktop publishing
+                          software like Aldus PageMaker including versions of
+                          Lorem Ipsum.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card border-0">
+                        <img
+                          src="images/beyond/03_bigscreen_collab.png"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row row-cols-2 row-cols-md-2 g-2">
+                    <div class="col">
+                      <div class="card border-0 bg-transparent">
+                        <h1 class="Beyond_title__3YM1e mb-2">Lorem Ipsum</h1>
+                        <p
+                          class="Beyond_text__1zAai Beyond_feature__hSwFA"
+                          style="text-align: justify"
+                        >
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and
+                          scrambled it to make a type specimen book. It has
+                          survived not only five centuries, but also the leap
+                          into electronic typesetting, remaining essentially
+                          unchanged. It was popularised in the 1960s with the
+                          release of Letraset sheets containing Lorem Ipsum
+                          passages, and more recently with desktop publishing
+                          software like Aldus PageMaker including versions of
+                          Lorem Ipsum.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card border-0">
+                        <img
+                          src="images/beyond/01_bigscreen_campfire.png"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4 text-center">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleControlsNoTouching"
+                  data-bs-slide="next"
+                  style="background: linear-gradient(270deg, #3772ff, #9757d7)"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleControlsNoTouching"
+                  data-bs-slide="prev"
+                  style="background: linear-gradient(270deg, #3772ff, #9757d7)"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <!-- End carousel small cards -->
+
+            <div
+              class="Beyond_wrap__3aXyu animated fadeIn"
+              style="animation-duration: 1s; margin: 50px 0"
+            >
+              <div class="stage Beyond_stage__3kFFR">
+                THE MOST IMMERSIVE HOME EXPERIENCE<i data-emoji="🎬🍿"></i>
+              </div>
+              <h1 class="h1 Beyond_title__3YM1e">
+                Enjoy all your favorites like never before
+              </h1>
+              <div class="Beyond_text__1zAai">
+                <span class="Beyond_feature__hSwFA"
+                  >Catch the shows you love near a cozy campfire<i
+                    data-emoji="🏕️"
+                  ></i>
+                  or go full immersion mode in the modern cinema.<i
+                    data-emoji="📽️"
+                  ></i
+                ></span>
+                Watching movies, TV series', and other video content in VR is
+                something else. It's truly engrossing. In Bigscreen, you can
+                view and share all of your favorite content in beautiful spaces.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Features_section__3xNvE">
+          <div class="container">
+            <!-- Carousel small cards -->
+            <div
+              id="carouselExampleControlsNoTouchingOne"
+              class="carousel slide"
+              data-bs-touch="false"
+              data-bs-interval="false"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="Features_wrap__2jIsP">
+                    <div
+                      class="animated fadeInDown"
+                      style="animation-duration: 1s"
+                    >
+                      <div
+                        class="slick-slider programs-slider Features_slider__33tCa slick-initialized"
+                        dir="ltr"
+                      >
+                        <div class="slick-list" style="height: 408px">
+                          <div
+                            class="slick-track"
+                            style="
+                              width: 1528px;
+                              opacity: 1;
+                              transform: translate3d(0px, 0px, 0px);
+                            "
+                          >
+                            <div
+                              data-index="0"
+                              class="slick-slide slick-active slick-current"
+                              tabindex="-1"
+                              aria-hidden="false"
+                              style="outline: none; width: 382px"
+                            >
+                              <div>
+                                <div
+                                  class="programs-item Features_item__iuL0N"
+                                  tabindex="-1"
+                                  style="width: 100%; display: inline-block"
+                                >
+                                  <div
+                                    class="Features_icon__1pwH7"
+                                    style="
+                                      background-color: rgb(0, 144, 255);
+                                      font-family: FontAwesomeBrands;
+                                    "
+                                  >
+                                    
+                                  </div>
+                                  <div class="Features_subtitle__2LBGU">
+                                    (Remote) Desktop
+                                  </div>
+                                  <div class="Features_content__1-7NV">
+                                    Use and share your desktop in virtual
+                                    reality. Tons of screen options to optimize
+                                    your experience.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              data-index="1"
+                              class="slick-slide slick-active"
+                              tabindex="-1"
+                              aria-hidden="false"
+                              style="outline: none; width: 382px"
+                            >
+                              <div>
+                                <div
+                                  class="programs-item Features_item__iuL0N"
+                                  tabindex="-1"
+                                  style="width: 100%; display: inline-block"
+                                >
+                                  <div
+                                    class="Features_icon__1pwH7"
+                                    style="
+                                      background-color: rgb(255, 114, 0);
+                                      font-family: FontAwesomeSolid;
+                                    "
+                                  >
+                                    
+                                  </div>
+                                  <div class="Features_subtitle__2LBGU">
+                                    Video Player
+                                  </div>
+                                  <div class="Features_content__1-7NV">
+                                    Play and share your own video files in one
+                                    of many theaters. Support for the majority
+                                    of video files, subtitles and more.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              data-index="2"
+                              class="slick-slide slick-active"
+                              tabindex="-1"
+                              aria-hidden="false"
+                              style="outline: none; width: 382px"
+                            >
+                              <div>
+                                <div
+                                  class="programs-item Features_item__iuL0N"
+                                  tabindex="-1"
+                                  style="width: 100%; display: inline-block"
+                                >
+                                  <div
+                                    class="Features_icon__1pwH7"
+                                    style="
+                                      background-color: rgb(84, 0, 255);
+                                      font-family: FontAwesomeSolid;
+                                    "
+                                  >
+                                    
+                                  </div>
+                                  <div class="Features_subtitle__2LBGU">
+                                    Movie Rentals
+                                  </div>
+                                  <div class="Features_content__1-7NV">
+                                    Watch more than 100 2D and 3D movies on
+                                    demand. Rent together or watch alone.
+                                  </div>
+                                  <a
+                                    class="button-stroke Features_button__1oSWQ"
+                                    href="#"
+                                    >Browse Catalog</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              data-index="3"
+                              class="slick-slide"
+                              tabindex="-1"
+                              aria-hidden="true"
+                              style="outline: none; width: 382px"
+                            >
+                              <div>
+                                <div
+                                  class="programs-item Features_item__iuL0N"
+                                  tabindex="-1"
+                                  style="width: 100%; display: inline-block"
+                                >
+                                  <div
+                                    class="Features_icon__1pwH7"
+                                    style="
+                                      background-color: rgb(241, 3, 122);
+                                      font-family: FontAwesomeSolid;
+                                    "
+                                  >
+                                    
+                                  </div>
+                                  <div class="Features_subtitle__2LBGU">TV</div>
+                                  <div class="Features_content__1-7NV">
+                                    Tune in to your favorite series' across
+                                    dozens of popular services, including genres
+                                    like anime and drama.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="Features_wrap__2jIsP">
+                    <div
+                      class="animated fadeInDown"
+                      style="animation-duration: 1s"
+                    >
+                      <div
+                        class="slick-slider programs-slider Features_slider__33tCa slick-initialized"
+                        dir="ltr"
+                      >
+                        <div class="slick-list" style="height: 408px">
+                          <div
+                            class="slick-track"
+                            style="
+                              width: 1528px;
+                              opacity: 1;
+                              transform: translate3d(0px, 0px, 0px);
+                            "
+                          >
+                            <div
+                              data-index="0"
+                              class="slick-slide slick-active slick-current"
+                              tabindex="-1"
+                              aria-hidden="false"
+                              style="outline: none; width: 382px"
+                            >
+                              <div>
+                                <div
+                                  class="programs-item Features_item__iuL0N"
+                                  tabindex="-1"
+                                  style="width: 100%; display: inline-block"
+                                >
+                                  <div
+                                    class="Features_icon__1pwH7"
+                                    style="
+                                      background-color: rgb(0, 144, 255);
+                                      font-family: FontAwesomeBrands;
+                                    "
+                                  >
+                                    
+                                  </div>
+                                  <div class="Features_subtitle__2LBGU">
+                                    (Remote) Desktop
+                                  </div>
+                                  <div class="Features_content__1-7NV">
+                                    Use and share your desktop in virtual
+                                    reality. Tons of screen options to optimize
+                                    your experience.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              data-index="1"
+                              class="slick-slide slick-active"
+                              tabindex="-1"
+                              aria-hidden="false"
+                              style="outline: none; width: 382px"
+                            >
+                              <div>
+                                <div
+                                  class="programs-item Features_item__iuL0N"
+                                  tabindex="-1"
+                                  style="width: 100%; display: inline-block"
+                                >
+                                  <div
+                                    class="Features_icon__1pwH7"
+                                    style="
+                                      background-color: rgb(255, 114, 0);
+                                      font-family: FontAwesomeSolid;
+                                    "
+                                  >
+                                    
+                                  </div>
+                                  <div class="Features_subtitle__2LBGU">
+                                    Video Player
+                                  </div>
+                                  <div class="Features_content__1-7NV">
+                                    Play and share your own video files in one
+                                    of many theaters. Support for the majority
+                                    of video files, subtitles and more.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              data-index="2"
+                              class="slick-slide slick-active"
+                              tabindex="-1"
+                              aria-hidden="false"
+                              style="outline: none; width: 382px"
+                            >
+                              <div>
+                                <div
+                                  class="programs-item Features_item__iuL0N"
+                                  tabindex="-1"
+                                  style="width: 100%; display: inline-block"
+                                >
+                                  <div
+                                    class="Features_icon__1pwH7"
+                                    style="
+                                      background-color: rgb(84, 0, 255);
+                                      font-family: FontAwesomeSolid;
+                                    "
+                                  >
+                                    
+                                  </div>
+                                  <div class="Features_subtitle__2LBGU">
+                                    Movie Rentals
+                                  </div>
+                                  <div class="Features_content__1-7NV">
+                                    Watch more than 100 2D and 3D movies on
+                                    demand. Rent together or watch alone.
+                                  </div>
+                                  <a
+                                    class="button-stroke Features_button__1oSWQ"
+                                    href="#"
+                                    >Browse Catalog</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              data-index="3"
+                              class="slick-slide"
+                              tabindex="-1"
+                              aria-hidden="true"
+                              style="outline: none; width: 382px"
+                            >
+                              <div>
+                                <div
+                                  class="programs-item Features_item__iuL0N"
+                                  tabindex="-1"
+                                  style="width: 100%; display: inline-block"
+                                >
+                                  <div
+                                    class="Features_icon__1pwH7"
+                                    style="
+                                      background-color: rgb(241, 3, 122);
+                                      font-family: FontAwesomeSolid;
+                                    "
+                                  >
+                                    
+                                  </div>
+                                  <div class="Features_subtitle__2LBGU">TV</div>
+                                  <div class="Features_content__1-7NV">
+                                    Tune in to your favorite series' across
+                                    dozens of popular services, including genres
+                                    like anime and drama.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4 text-center">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleControlsNoTouchingOne"
+                  data-bs-slide="next"
+                  style="background: linear-gradient(270deg, #3772ff, #9757d7)"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleControlsNoTouchingOne"
+                  data-bs-slide="prev"
+                  style="background: linear-gradient(270deg, #3772ff, #9757d7)"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <!-- End carousel small cards -->
+          </div>
+        </div>
+        <!-- Section gaming new -->
+        <div class="section Coworking_coworking__2qgav">
+          <!-- New image display -->
+          <div _ngcontent-kib-c29="" class="container">
+            <div _ngcontent-kib-c29="" class="stake-bg">
+              <div _ngcontent-kib-c29="" class="row align-items-end">
+                <div _ngcontent-kib-c29="" class="col-lg-8 col-md-12">
+                  <div
+                    _ngcontent-kib-c29=""
+                    class="stake-content"
+                    style="text-align: left"
+                  >
+                    <span _ngcontent-kib-c29="" class="top-title">Gaming</span>
+                    <h2 _ngcontent-kib-c29="">Play any PC game</h2>
+                    <p _ngcontent-kib-c29="">
+                      Play your favorite PC game on a huge screen. Play that old
+                      school SNES game with others from around the world. With
+                      desktop screen sharing you'll be able to play any PC game
+                      with others. Multi screen enables everyone to share their
+                      game at the same time.
+                    </p>
+                    <a
+                      _ngcontent-kib-c29=""
+                      routerlink="/projects"
+                      class="default-btn btn-active"
+                      href="#"
+                    >
+                      Play game
+                    </a>
+                  </div>
+                </div>
+                <div _ngcontent-kib-c29="" class="col-lg-4 col-md-12">
+                  <div _ngcontent-kib-c29="" class="stake-image">
+                    <img
+                      _ngcontent-kib-c29=""
+                      width="450"
+                      src="images/product/gaming_2.png"
+                      alt="stake-image"
+                    />
+                  </div>
+                </div>
+              </div>
+              <img
+                _ngcontent-kib-c29=""
+                src="https://mave-ng.hibootstrap.com/assets/images/page-star.png"
+                alt="page-star"
+                class="page-star"
+              />
+            </div>
+          </div>
+          <!-- End new image display -->
+        </div>
+        <!-- End section gaming -->
+
+        <div class="section-bg Social_section__34Zd_">
+          <div class="Social_background__32Hvq"></div>
+          <div class="Social_m_gallery__g5naF">
+            <div class="animated fadeInUp" style="animation-duration: 1s">
+              <img
+                class="Social_image__2qm1f"
+                src="images/product/social_v2.png"
+                alt="Collaboration"
+              />
+            </div>
+          </div>
+          <div class="container Social_container__DSWi1">
+            <div class="Social_gallery__3vrqV">
+              <div class="animated" style="animation-duration: 1s">
+                <!-- Button trigger modal -->
+                <button
+                  type="button"
+                  class="play Social_play__3hlex"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  <svg class="" width="21" height="21" viewBox="0 0 16 16">
+                    <path
+                      d="M1.509 2.463c0-1.71 1.876-2.755 3.33-1.855l8.945 5.538c1.378.853 1.378 2.857 0 3.711l-8.945 5.538c-1.454.899-3.33-.147-3.33-1.856V2.463z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+              class="Social_wrap__3a7uR animated"
+              style="animation-duration: 2s"
+            >
+              <h2 class="h2 Social_title__3ykoG">Social</h2>
+              <div class="Social_info__1peBs">
+                Interact with others remotely as if you were face to face. Every
+                aspect of Bigscreen is fully social, interactable and shareable
+              </div>
+              <div class="Social_list__2O1Ll">
+                <div class="Social_item__Ah-kH">
+                  <div
+                    class="Social_icon__1qRD7"
+                    style="
+                      background-color: rgb(69, 178, 107);
+                      font-family: FontAwesomeSolid;
+                    "
+                  >
+                    
+                  </div>
+                  <div class="Social_details__2MPvK">
+                    <div class="Social_subtitle__3wZtR">Spatial voice chat</div>
+                    <div class="Social_content__2CtJU">
+                      Life-like communication, thanks to the combination of VR
+                      and spatial audio
+                    </div>
+                  </div>
+                </div>
+                <div class="Social_item__Ah-kH">
+                  <div
+                    class="Social_icon__1qRD7"
+                    style="
+                      background-color: rgb(151, 87, 215);
+                      font-family: FontAwesomeSolid;
+                    "
+                  >
+                    
+                  </div>
+                  <div class="Social_details__2MPvK">
+                    <div class="Social_subtitle__3wZtR">
+                      Customize your identity
+                    </div>
+                    <div class="Social_content__2CtJU">
+                      Tons of options to customize your avatar. Be who ever you
+                      want!
+                    </div>
+                  </div>
+                </div>
+                <div class="Social_item__Ah-kH">
+                  <div
+                    class="Social_icon__1qRD7"
+                    style="
+                      background-color: rgb(55, 114, 255);
+                      font-family: FontAwesomeSolid;
+                    "
+                  >
+                    
+                  </div>
+                  <div class="Social_details__2MPvK">
+                    <div class="Social_subtitle__3wZtR">
+                      Public &amp; private rooms
+                    </div>
+                    <div class="Social_content__2CtJU">
+                      Meet new people in public rooms or hang-out with friends
+                      and family in private rooms
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section Rooms_section__JyPmx">
+          <div class="container Rooms_container__12eMz">
+            <div class="Rooms_wrap__1DmKj animated">
+              <div class="stage Rooms_stage__1USAu">
+                IT DOES NOT STOP THERE<i data-emoji="🔥"></i>
+              </div>
+              <h1 class="h1 Rooms_title__23uiC">Get creative!</h1>
+              <div class="Rooms_text__1WRWI">
+                The unique mix of screens and features enables everyone to use,
+                join, and host multi-purpose rooms in Bigscreen. We've seen so
+                many unique rooms, like drawing together while watching Bob
+                Ross, philosophy chats, karaoke nights and playing games
+                together.&nbsp;<span class="Rooms_feature__2vP5g"
+                  >The possibilities are endless.</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- card group -->
+          <div class="row g-4 marquee">
+            <div class="marquee-content">
+              <div class="col marquee-item">
+                <div class="card bg-dark text-white">
+                  <img
+                    src="images/beyond/04_bigscreen_gaming.png"
+                    class="card-img"
+                    alt="..."
+                  />
+                  <div class="card-img-overlay">
+                    <h5 class="card-title">Name of player</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col marquee-item">
+                <div class="card bg-dark text-white">
+                  <img
+                    src="images/beyond/01_bigscreen_campfire.png"
+                    class="card-img"
+                    alt="..."
+                  />
+                  <div class="card-img-overlay">
+                    <h5 class="card-title">Name of player</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col marquee-item">
+                <div class="card bg-dark text-white">
+                  <img
+                    src="images/beyond/02_bigscreen_cinema.png"
+                    class="card-img"
+                    alt="..."
+                  />
+                  <div class="card-img-overlay">
+                    <h5 class="card-title">Name of player</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col marquee-item">
+                <div class="card bg-dark text-white">
+                  <img
+                    src="images/beyond/03_bigscreen_collab.png"
+                    class="card-img"
+                    alt="..."
+                  />
+                  <div class="card-img-overlay">
+                    <h5 class="card-title">Name of player</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col marquee-item">
+                <div class="card bg-dark text-white">
+                  <img
+                    src="images/beyond/05_bigscreen_livingroom.png"
+                    class="card-img"
+                    alt="..."
+                  />
+                  <div class="card-img-overlay">
+                    <h5 class="card-title">Name of player</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col marquee-item">
+                <div class="card bg-dark text-white">
+                  <img
+                    src="images/beyond/06_Cinema_image.png"
+                    class="card-img"
+                    alt="..."
+                  />
+                  <div class="card-img-overlay">
+                    <h5 class="card-title">Name of player</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col marquee-item">
+                <div class="card bg-dark text-white">
+                  <img
+                    src="images/beyond/07_modern_living_room.png"
+                    class="card-img"
+                    alt="..."
+                  />
+                  <div class="card-img-overlay">
+                    <h5 class="card-title">Name of player</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End card group -->
+        </div>
+
+        <!-- Section How to use -->
+        <div class="section HowTo_section__STq8g">
+          <!-- New image display -->
+          <div _ngcontent-kib-c29="" class="container">
+            <div _ngcontent-kib-c29="" class="stake-bg">
+              <div _ngcontent-kib-c29="" class="row align-items-end">
+                <div _ngcontent-kib-c29="" class="col-lg-8 col-md-12">
+                  <div
+                    _ngcontent-kib-c29=""
+                    class="stake-content"
+                    style="text-align: left"
+                  >
+                    <span _ngcontent-kib-c29="" class="top-title"
+                      >Ready to start</span
+                    >
+                    <h2 _ngcontent-kib-c29="">Learn how to use Bigscreen</h2>
+                    <p _ngcontent-kib-c29="">
+                      Excited about some of the use cases we've shown you? Let
+                      us explain the basics and show how you can set things up
+                      yourself!
+                    </p>
+                    <a
+                      _ngcontent-kib-c29=""
+                      routerlink="/projects"
+                      class="default-btn btn-active"
+                      href="#"
+                    >
+                      How to use site?
+                    </a>
+                  </div>
+                </div>
+                <div _ngcontent-kib-c29="" class="col-lg-4 col-md-12">
+                  <div _ngcontent-kib-c29="" class="stake-image">
+                    <img
+                      _ngcontent-kib-c29=""
+                      width="450"
+                      src="images/product/screens_social_tv.png"
+                      alt="stake-image"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End new image display -->
+        </div>
+        <!-- End section How to use -->
+      </div>
+      <footer class="Footer_footer__3HGV9">
+        <div class="Footer_body__2HRIA">
+          <div class="container Footer_container__1YkT_">
+            <div class="Footer_col__1VR2s">
+              <div class="Footer_item__2NghX">
+                <div class="Footer_category__3prEp">
+                  menu<svg class="" width="9" height="9" viewBox="0 0 16 16">
+                    <path
+                      d="M15.039 3.961c-.653-.653-1.713-.653-2.366 0L8 8.634 3.327 3.961c-.653-.653-1.713-.653-2.366 0s-.653 1.713 0 2.366l5.856 5.856c.653.653 1.713.653 2.366 0l5.856-5.856c.653-.653.653-1.713 0-2.366z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="Footer_menu__37aWI">
+                  <a
+                    class="Footer_link__3ngYf"
+                    href="#"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Blog</a
+                  ><a class="Footer_link__3ngYf" href="#">Contact</a
+                  ><a class="Footer_link__3ngYf" href="#">Account login</a>
+                </div>
+              </div>
+            </div>
+            <div class="Footer_col__1VR2s">
+              <div class="Footer_category__3prEp">follow us</div>
+              <div class="Footer_socials__2zt5G">
+                <a
+                  class="Footer_social__3k5Qz"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="" width="19" height="19" viewBox="0 0 16 16">
+                    <path
+                      d="M2.121 9.233C1.018 9.236.306 10.492.986 11.444c.973 1.363 2.737 2.456 5.681 2.456 4.563 0 8.226-3.719 7.714-8.113l.751-1.503c.521-1.042-.384-2.227-1.527-1.999l-.993.198c-.263-.139-.535-.244-.768-.32-.454-.148-1.003-.265-1.511-.265-.913 0-1.701.234-2.327.704-.619.464-.968 1.075-1.159 1.635-.088.258-.147.518-.185.766-.354-.111-.715-.261-1.069-.445-.802-.415-1.451-.942-1.817-1.404-.614-.775-1.915-.717-2.371.29-.643 1.42-.467 3.102.111 4.462a6.57 6.57 0 0 0 .754 1.324l-.151.001zm4.546 3.333c-2.576 0-3.907-.933-4.596-1.898-.031-.043 0-.102.054-.103.701-.002 2.139-.035 3.087-.59.049-.029.038-.101-.016-.119-2.211-.743-3.467-3.891-2.575-5.86.02-.045.081-.051.112-.012C3.752 5.271 5.98 6.531 7.919 6.566c.042.001.074-.037.067-.079-.078-.507-.376-3.254 2.347-3.254.65 0 1.618.317 1.974.642a.07.07 0 0 0 .061.017l1.498-.3c.054-.011.098.046.073.095l-.929 1.858c-.006.013-.008.028-.006.042.651 3.658-2.345 6.978-6.337 6.978z"
+                    ></path></svg></a
+                ><a
+                  class="Footer_social__3k5Qz"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="" width="16" height="16" viewBox="0 0 16 16">
+                    <path
+                      d="M7.967.017a8 8 0 1 1 0 16 8 8 0 1 1 0-16zm0 1.6a6.4 6.4 0 0 0-6.4 6.4c0 2.982 2.039 5.487 4.799 6.198l.001-4.598h-.8a.8.8 0 1 1 0-1.6h.8v-1.6a2.4 2.4 0 0 1 2.4-2.4h.8a.8.8 0 1 1 0 1.6h0-.8a.8.8 0 0 0-.8.8h0v1.6h1.6a.8.8 0 1 1 0 1.6h0-1.6v4.8a6.4 6.4 0 0 0 0-12.8z"
+                    ></path></svg></a
+                ><a
+                  class="Footer_social__3k5Qz"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="" width="21" height="21" viewBox="0 0 16 16">
+                    <g transform="translate(0 2.5), scale(0.7)">
+                      <path
+                        id="Vector"
+                        d="M11,15c-3.293,0-5.961-.126-7.619-.231A3.432,3.432,0,0,1,.187,11.544C.063,9.911,0,8.55,0,7.5S.063,5.089.187,3.456A3.433,3.433,0,0,1,3.381.23C5.8.078,8.365,0,11,0c2.6,0,5.233.08,7.62.23a3.432,3.432,0,0,1,3.193,3.226C21.937,5.1,22,6.457,22,7.5s-.063,2.4-.188,4.044a3.43,3.43,0,0,1-3.193,3.225C16.961,14.874,14.293,15,11,15ZM11,1.875c-3.242,0-5.871.123-7.506.227A1.593,1.593,0,0,0,2.015,3.6c-.121,1.587-.182,2.9-.182,3.9s.061,2.312.182,3.9a1.592,1.592,0,0,0,1.478,1.5c2.387.151,4.912.228,7.506.228s5.12-.077,7.506-.228a1.593,1.593,0,0,0,1.479-1.5c.083-1.085.181-2.642.181-3.9s-.1-2.813-.181-3.9a1.594,1.594,0,0,0-1.479-1.5C16.871,2,14.242,1.875,11,1.875Z"
+                      ></path>
+                      <path
+                        id="Vector-2"
+                        d="M4.356,2.109a.917.917,0,0,1,0,1.525L1.425,5.589A.917.917,0,0,1,0,4.826V.918A.917.917,0,0,1,1.425.155Z"
+                        transform="translate(9.167 4.128)"
+                      ></path>
+                    </g></svg></a
+                ><a
+                  class="Footer_social__3k5Qz"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="" width="22" height="22" viewBox="0 0 16 16">
+                    <g transform="translate(4 1), scale(0.7)">
+                      <path
+                        id="Vector"
+                        d="M5.526,17.438c-5.1,0-9.243-2.767-9.243-6.167a4.17,4.17,0,0,1,.058-.7A2.344,2.344,0,0,1-4.771,8.581,2.345,2.345,0,0,1-2.429,6.239a2.336,2.336,0,0,1,1.552.588A11.89,11.89,0,0,1,5.261,5.105L6.823.339l.341.08.008,0,3.64.857a1.929,1.929,0,1,1-.154.758L7.337,1.254,6.072,5.114a11.763,11.763,0,0,1,5.908,1.745,2.342,2.342,0,1,1,2.739,3.762,4.172,4.172,0,0,1,.051.65c0,3.4-4.148,6.167-9.244,6.167Zm-8.393-6.9a3.5,3.5,0,0,0-.077.731c0,2.975,3.8,5.394,8.471,5.394S14,14.245,14,11.271a3.48,3.48,0,0,0-.071-.7.388.388,0,0,1-.038-.168,4.922,4.922,0,0,0-1.982-2.679.383.383,0,0,1-.166-.117A11.124,11.124,0,0,0,5.526,5.876a11.16,11.16,0,0,0-6.168,1.7A.4.4,0,0,1-.8,7.684a4.969,4.969,0,0,0-2.032,2.695.383.383,0,0,1-.032.148A.121.121,0,0,1-2.867,10.54ZM12.626,7.325a5.771,5.771,0,0,1,1.89,2.507,1.57,1.57,0,0,0-1.89-2.507ZM-2.429,7.011A1.571,1.571,0,0,0-4,8.581a1.571,1.571,0,0,0,.555,1.2A5.833,5.833,0,0,1-1.532,7.293,1.571,1.571,0,0,0-2.429,7.011ZM12.586.877a1.156,1.156,0,1,0,1.155,1.156A1.157,1.157,0,0,0,12.586.877ZM5.568,15.238A4.53,4.53,0,0,1,2.235,14.2a.386.386,0,0,1,.547-.546,3.837,3.837,0,0,0,2.786.807,3.842,3.842,0,0,0,2.787-.807A.386.386,0,1,1,8.9,14.2a4.532,4.532,0,0,1-3.333,1.034Z"
+                        transform="translate(0)"
+                        stroke="#777e90"
+                        stroke-width="0.7"
+                      ></path>
+                      <path
+                        id="Vector-2"
+                        d="M17.884,22.35A1.464,1.464,0,0,0,16.436,23.8a1.445,1.445,0,0,0,1.449,1.425A1.425,1.425,0,0,0,19.309,23.8a1.444,1.444,0,0,0-1.425-1.447Zm-6.243,0A1.463,1.463,0,0,0,10.194,23.8a1.444,1.444,0,0,0,1.447,1.425A1.425,1.425,0,0,0,13.066,23.8a1.444,1.444,0,0,0-1.425-1.447Z"
+                        transform="translate(-9.183 -13.65)"
+                      ></path>
+                    </g></svg
+                ></a>
+              </div>
+              <a
+                class="button Footer_button__31KA4"
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                ><svg
+                  class="Footer_comicon__1Gxpr"
+                  width="26"
+                  height="26"
+                  viewBox="0 0 16 16"
+                >
+                  <defs>
+                    <clipPath id="clip-path">
+                      <rect
+                        id="Rectangle_1201"
+                        width="27"
+                        height="21"
+                        transform="translate(0 0)"
+                      ></rect>
+                    </clipPath>
+                  </defs>
+                  <g
+                    transform="translate(0 2), scale(0.5)"
+                    clip-path="url(#clip-path)"
+                  >
+                    <path
+                      id="Vector"
+                      d="M21.784,2.038A21.22,21.22,0,0,0,16.546.413a.08.08,0,0,0-.084.04,14.781,14.781,0,0,0-.652,1.34,19.59,19.59,0,0,0-5.883,0A13.557,13.557,0,0,0,9.264.453.083.083,0,0,0,9.18.413,21.161,21.161,0,0,0,3.942,2.038a.075.075,0,0,0-.034.03,21.718,21.718,0,0,0-3.8,14.647.088.088,0,0,0,.033.06,21.339,21.339,0,0,0,6.426,3.248.083.083,0,0,0,.09-.03A15.252,15.252,0,0,0,7.97,17.855a.081.081,0,0,0-.045-.113,14.053,14.053,0,0,1-2.007-.957.083.083,0,0,1-.008-.137c.135-.1.27-.206.4-.312a.08.08,0,0,1,.083-.011,15.218,15.218,0,0,0,12.932,0,.079.079,0,0,1,.084.01c.129.106.264.212.4.313a.082.082,0,0,1-.007.137,13.187,13.187,0,0,1-2.008.956.082.082,0,0,0-.044.114,17.125,17.125,0,0,0,1.314,2.137.082.082,0,0,0,.09.031,21.268,21.268,0,0,0,6.436-3.248.083.083,0,0,0,.033-.059,21.575,21.575,0,0,0-3.8-14.647A.065.065,0,0,0,21.784,2.038ZM8.6,13.791A2.473,2.473,0,0,1,6.286,11.2,2.46,2.46,0,0,1,8.6,8.6,2.446,2.446,0,0,1,10.912,11.2,2.46,2.46,0,0,1,8.6,13.791Zm8.551,0A2.473,2.473,0,0,1,14.837,11.2,2.46,2.46,0,0,1,17.15,8.6,2.446,2.446,0,0,1,19.462,11.2,2.453,2.453,0,0,1,17.15,13.791Z"
+                      transform="translate(0.678 0.804)"
+                    ></path>
+                  </g></svg
+                >JOIN THE DISCORD</a
+              >
+            </div>
+            <div class="Footer_col__1VR2s">
+              <div class="Footer_category__3prEp">newsletter</div>
+              <div class="Footer_info__TSamq">
+                Subscribe to our newsletter so you don't miss out on special
+                events, updates, and more!
+              </div>
+              <a class="button-stroke" href="#" target="_blank" rel="noreferrer"
+                >Sign Up</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="Footer_foot__AvEGR">
+          <div class="container Footer_container__1YkT_">
+            <div class="Footer_copyright__20NVb">
+              Copyright © 2021 Bigscreen, Inc. All rights reserved
+            </div>
+            <div class="Footer_footerLinks__1WS0d">
+              <button class="Footer_footerLink__1N_-u">terms of service</button>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div
+        class="Overlay_parent__3xyjZ animated fadeIn"
+        style="animation-duration: 0.2s; display: none; top: 0px; height: 667px"
+      >
+        <div class="Overlay_overlay__32LUA Header_center__2N1vb">
+          <div class="loadingIndicator">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="49.924"
+              height="50.154"
+              viewBox="0 0 49.924 50.154"
+            >
+              <g id="loader" opacity="0.47">
+                <path
+                  id="Path_236"
+                  data-name="Path 236"
+                  d="M38.675,5.932a6.536,6.536,0,1,1-6.536,6.535,6.536,6.536,0,0,1,6.536-6.535ZM44.6,21.274A5.326,5.326,0,1,0,49.924,26.6,5.327,5.327,0,0,0,44.6,21.274ZM38.422,36.695a3.72,3.72,0,1,0,3.72,3.72,3.721,3.721,0,0,0-3.72-3.72ZM24.194,42.714a3.72,3.72,0,1,0,3.72,3.72,3.72,3.72,0,0,0-3.72-3.72ZM9.654,37.085a3.486,3.486,0,1,0,3.485,3.486,3.485,3.485,0,0,0-3.485-3.486ZM3.713,22.4a3.712,3.712,0,1,0,3.711,3.713A3.712,3.712,0,0,0,3.713,22.4ZM9.654,6.949a4.7,4.7,0,1,0,4.7,4.7,4.7,4.7,0,0,0-4.7-4.7ZM24.221,0a5.655,5.655,0,1,0,5.655,5.655A5.657,5.657,0,0,0,24.221,0Z"
+                  fill="#fff"
+                  fill-rule="evenodd"
+                ></path>
+              </g>
+            </svg>
+          </div>
+          Logging out...
+        </div>
+      </div>
+      <div
+        class="Overlay_parent__3xyjZ animated fadeIn"
+        style="animation-duration: 1s; display: none; top: 0px; height: 667px"
+      ></div>
+      <div
+        class="Overlay_parent__3xyjZ animated fadeIn"
+        style="animation-duration: 0.2s; display: none; top: 0px; height: 667px"
+      >
+        <div class="Overlay_overlay__32LUA Footer_infobox__I3X-0">
+          <div class="Footer_form__1Ctaq Footer_infotext__3oAcx">
+            <div class="Footer_label__2Vhue"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="js/m.chunk.js"></script>
+    <script src="js/main.chunk.js"></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
