@@ -40,6 +40,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
       rel="stylesheet"
     />
+    
     <style>
       @font-face {
         font-family: SFProDisplay-Bold;
@@ -247,12 +248,33 @@
           width: 300px;
           height: 300px;
         }
+        .slick-track{
+          display: flow-root !important;
+        }
       }
     </style>
     <link href="/style/main.css" rel="stylesheet" />
     <script src="https://js.stripe.com/v3"></script>
   </head>
   <body>
+<!-- Modal -->
+  <div
+      class="modal fade"
+      id="staticBackdrop"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+  <div class="modal-dialog">
+    <div class="modal-content bg-transparent">
+      <div class="modal-body text-center">
+        <video controls>
+          <source src="media/video_1.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- This is the modal content of youtube -->
     <div
       class="modal fade"
@@ -267,7 +289,7 @@
             <iframe
               width="1024"
               height="576"
-              src="https://www.youtube.com/embed/Ll4d3Iv3s5s"
+              src="https://www.youtube.com/embed/6ES2U6WpZeA"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -283,7 +305,7 @@
       <header class="Header_header__JleW2">
         <div class="container Header_container__1zVrb">
           <a class="Header_logo__3Yyyg" href="/"
-            ><img src="/images/logos/logo@2x.png" alt="Creators Training" style="width: 150px; height: 150pxpx;"
+            ><img src="/images/logos/logo@2x.png" alt="Creators Training" style="width: 150px; margin-top: 5px;"
           /></a>
           <div class="Header_wrap__24ZzR">
             <div>
@@ -311,8 +333,8 @@
                     ><svg class="" width="19" height="19" viewBox="0 0 16 16">
                       <path
                         d="M2.121 9.233C1.018 9.236.306 10.492.986 11.444c.973 1.363 2.737 2.456 5.681 2.456 4.563 0 8.226-3.719 7.714-8.113l.751-1.503c.521-1.042-.384-2.227-1.527-1.999l-.993.198c-.263-.139-.535-.244-.768-.32-.454-.148-1.003-.265-1.511-.265-.913 0-1.701.234-2.327.704-.619.464-.968 1.075-1.159 1.635-.088.258-.147.518-.185.766-.354-.111-.715-.261-1.069-.445-.802-.415-1.451-.942-1.817-1.404-.614-.775-1.915-.717-2.371.29-.643 1.42-.467 3.102.111 4.462a6.57 6.57 0 0 0 .754 1.324l-.151.001zm4.546 3.333c-2.576 0-3.907-.933-4.596-1.898-.031-.043 0-.102.054-.103.701-.002 2.139-.035 3.087-.59.049-.029.038-.101-.016-.119-2.211-.743-3.467-3.891-2.575-5.86.02-.045.081-.051.112-.012C3.752 5.271 5.98 6.531 7.919 6.566c.042.001.074-.037.067-.079-.078-.507-.376-3.254 2.347-3.254.65 0 1.618.317 1.974.642a.07.07 0 0 0 .061.017l1.498-.3c.054-.011.098.046.073.095l-.929 1.858c-.006.013-.008.028-.006.042.651 3.658-2.345 6.978-6.337 6.978z"
-                      ></path></svg></a
-                  ><a
+                      ></path></svg></a>
+                  <a
                     class="Header_social__1rKiS"
                     href="#"
                     target="_blank"
@@ -329,12 +351,14 @@
                           transform="translate(9.167 4.128)"
                         ></path>
                       </g></svg></a
-                  ><a
+                  >
+                  <a
                     class="Header_social__1rKiS"
                     href="#"
                     target="_blank"
                     rel="noopener noreferrer"
-                    ><svg class="" width="22" height="22" viewBox="0 0 16 16">
+                    >
+                    <svg class="" width="22" height="22" viewBox="0 0 16 16">
                       <g transform="translate(4 1), scale(0.7)">
                         <path
                           id="Vector"
@@ -348,8 +372,9 @@
                           d="M17.884,22.35A1.464,1.464,0,0,0,16.436,23.8a1.445,1.445,0,0,0,1.449,1.425A1.425,1.425,0,0,0,19.309,23.8a1.444,1.444,0,0,0-1.425-1.447Zm-6.243,0A1.463,1.463,0,0,0,10.194,23.8a1.444,1.444,0,0,0,1.447,1.425A1.425,1.425,0,0,0,13.066,23.8a1.444,1.444,0,0,0-1.425-1.447Z"
                           transform="translate(-9.183 -13.65)"
                         ></path>
-                      </g></svg
-                  ></a>
+                      </g>
+                      </svg>
+                    </a>
                 </div>
                 <a
                   class="button-stroke button-small Header_button__2u-UY"
@@ -371,7 +396,7 @@
           <div class="Hero_background__16CnU">
             <iframe
               class="Hero_video__3kPp9"
-              src="https://www.youtube.com/embed/Ll4d3Iv3s5s?controls=0&amp;autoplay=1&amp;mute=1&amp;playlist=Ll4d3Iv3s5s&amp;loop=1"
+              src="https://www.youtube.com/embed/Q3oYAv2FASo?controls=0&amp;autoplay=1&amp;mute=1&amp;playlist=Q3oYAv2FASo&amp;loop=1"
               title="V"
             ></iframe>
           </div>
@@ -406,79 +431,38 @@
           </div>
           <!-- Start the sub nav menus -->
           <div class="Platforms_container__Cs6X5">
-            <div class="Platforms_list__23aJq">
-              <a
-                class="Platforms_community__3GHo8"
-                href="https://www.creators-t.com"
-                rel="noreferrer"
-                >Go to our Website
-                <!-- <svg
-                  class="Platforms_comicon__1R8_A"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 16 16"
-                > -->
-                  <defs>
-                    <clipPath id="clip-path">
-                      <rect
-                        id="Rectangle_1201"
-                        width="27"
-                        height="21"
-                        transform="translate(0 0)"
-                      ></rect>
-                    </clipPath>
-                  </defs>
-                  <g
-                    transform="translate(0 2), scale(0.5)"
-                    clip-path="url(#clip-path)"
-                  >
-                    <path
-                      id="Vector"
-                      d="M21.784,2.038A21.22,21.22,0,0,0,16.546.413a.08.08,0,0,0-.084.04,14.781,14.781,0,0,0-.652,1.34,19.59,19.59,0,0,0-5.883,0A13.557,13.557,0,0,0,9.264.453.083.083,0,0,0,9.18.413,21.161,21.161,0,0,0,3.942,2.038a.075.075,0,0,0-.034.03,21.718,21.718,0,0,0-3.8,14.647.088.088,0,0,0,.033.06,21.339,21.339,0,0,0,6.426,3.248.083.083,0,0,0,.09-.03A15.252,15.252,0,0,0,7.97,17.855a.081.081,0,0,0-.045-.113,14.053,14.053,0,0,1-2.007-.957.083.083,0,0,1-.008-.137c.135-.1.27-.206.4-.312a.08.08,0,0,1,.083-.011,15.218,15.218,0,0,0,12.932,0,.079.079,0,0,1,.084.01c.129.106.264.212.4.313a.082.082,0,0,1-.007.137,13.187,13.187,0,0,1-2.008.956.082.082,0,0,0-.044.114,17.125,17.125,0,0,0,1.314,2.137.082.082,0,0,0,.09.031,21.268,21.268,0,0,0,6.436-3.248.083.083,0,0,0,.033-.059,21.575,21.575,0,0,0-3.8-14.647A.065.065,0,0,0,21.784,2.038ZM8.6,13.791A2.473,2.473,0,0,1,6.286,11.2,2.46,2.46,0,0,1,8.6,8.6,2.446,2.446,0,0,1,10.912,11.2,2.46,2.46,0,0,1,8.6,13.791Zm8.551,0A2.473,2.473,0,0,1,14.837,11.2,2.46,2.46,0,0,1,17.15,8.6,2.446,2.446,0,0,1,19.462,11.2,2.453,2.453,0,0,1,17.15,13.791Z"
-                      transform="translate(0.678 0.804)"
-                    ></path>
-                  </g></svg
-              ></a>
-              <!-- <a
-                href="#"
-                target="blank"
-                class="Platforms_logo__1J6ur"
-                style="height: 13.16%"
-                ><img
-                  src="/images/logos/oculus_quest.svg"
-                  alt="oculus quest" /></a
-              ><a
-                href="#"
-                target="blank"
-                class="Platforms_logo__1J6ur"
-                style="height: 13.16%"
-                ><img
-                  src="/images/logos/oculus_rift_s.svg"
-                  alt="oculus rift s" /></a
-              ><a
-                href="#"
-                target="blank"
-                class="Platforms_logo__1J6ur"
-                style="height: 18.42%"
-                ><img
-                  src="/images/logos/valve_index.svg"
-                  alt="valve index" /></a
-              ><a
-                href="#"
-                target="blank"
-                class="Platforms_logo__1J6ur"
-                style="height: 17.11%"
-                ><img
-                  src="/images/logos/windowsmr.svg"
-                  alt="windows mixed reality" /></a
-              ><a
-                href="#"
-                target="blank"
-                class="Platforms_logo__1J6ur"
-                style="height: 17.11%"
-                ><img src="/images/logos/htc_vive.svg" alt="htc vive"
-              /></a> -->
-            </div>
+            <a
+              class="Platforms_community__3GHo8"
+              href="https://www.creators-t.com"
+              rel="noreferrer"
+              >Go to our Website
+              <!-- <svg
+                class="Platforms_comicon__1R8_A"
+                width="32"
+                height="32"
+                viewBox="0 0 16 16"
+              > -->
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect
+                      id="Rectangle_1201"
+                      width="27"
+                      height="21"
+                      transform="translate(0 0)"
+                    ></rect>
+                  </clipPath>
+                </defs>
+                <g
+                  transform="translate(0 2), scale(0.5)"
+                  clip-path="url(#clip-path)"
+                >
+                  <path
+                    id="Vector"
+                    d="M21.784,2.038A21.22,21.22,0,0,0,16.546.413a.08.08,0,0,0-.084.04,14.781,14.781,0,0,0-.652,1.34,19.59,19.59,0,0,0-5.883,0A13.557,13.557,0,0,0,9.264.453.083.083,0,0,0,9.18.413,21.161,21.161,0,0,0,3.942,2.038a.075.075,0,0,0-.034.03,21.718,21.718,0,0,0-3.8,14.647.088.088,0,0,0,.033.06,21.339,21.339,0,0,0,6.426,3.248.083.083,0,0,0,.09-.03A15.252,15.252,0,0,0,7.97,17.855a.081.081,0,0,0-.045-.113,14.053,14.053,0,0,1-2.007-.957.083.083,0,0,1-.008-.137c.135-.1.27-.206.4-.312a.08.08,0,0,1,.083-.011,15.218,15.218,0,0,0,12.932,0,.079.079,0,0,1,.084.01c.129.106.264.212.4.313a.082.082,0,0,1-.007.137,13.187,13.187,0,0,1-2.008.956.082.082,0,0,0-.044.114,17.125,17.125,0,0,0,1.314,2.137.082.082,0,0,0,.09.031,21.268,21.268,0,0,0,6.436-3.248.083.083,0,0,0,.033-.059,21.575,21.575,0,0,0-3.8-14.647A.065.065,0,0,0,21.784,2.038ZM8.6,13.791A2.473,2.473,0,0,1,6.286,11.2,2.46,2.46,0,0,1,8.6,8.6,2.446,2.446,0,0,1,10.912,11.2,2.46,2.46,0,0,1,8.6,13.791Zm8.551,0A2.473,2.473,0,0,1,14.837,11.2,2.46,2.46,0,0,1,17.15,8.6,2.446,2.446,0,0,1,19.462,11.2,2.453,2.453,0,0,1,17.15,13.791Z"
+                    transform="translate(0.678 0.804)"
+                  ></path>
+                </g></svg
+            ></a>
           </div>
           <!-- End the sub nav menus -->
         </div>
@@ -736,25 +720,25 @@
                                 <div
                                   class="programs-item Features_item__iuL0N"
                                   tabindex="-1"
-                                  style="width: 100%; display: inline-block"
+                                  style="width: 100%; display: inline-block; text-align: -webkit-center;"
                                 >
+                                <video width="300" height="240" autoplay loop muted>
+                                  <source src="media/video_1.mp4" type="video/mp4">
+                                </video>
+                                    <!-- Button trigger modal -->
+                                    <button class="text-light bg-transparent" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+
+
                                   <div
                                     class="Features_icon__1pwH7"
                                     style="
-                                      background-color: rgb(0, 144, 255);
-                                      font-family: FontAwesomeBrands;
+                                      background: linear-gradient(270deg, #3772ff, #9757d7);
+                                      font-family: FontAwesomeSolid;
                                     "
                                   >
-                                    
+                                    
                                   </div>
-                                  <div class="Features_subtitle__2LBGU">
-                                    (Remote) Desktop
-                                  </div>
-                                  <div class="Features_content__1-7NV">
-                                    Use and share your desktop in virtual
-                                    reality. Tons of screen options to optimize
-                                    your experience.
-                                  </div>
+                                </button>
                                 </div>
                               </div>
                             </div>
@@ -769,24 +753,19 @@
                                 <div
                                   class="programs-item Features_item__iuL0N"
                                   tabindex="-1"
-                                  style="width: 100%; display: inline-block"
+                                  style="width: 100%; display: inline-block; text-align: -webkit-center;"
                                 >
+                                <video width="300" height="240" autoplay loop muted>
+                                  <source src="media/video_5.mp4" type="video/mp4">
+                                </video>
                                   <div
                                     class="Features_icon__1pwH7"
                                     style="
-                                      background-color: rgb(255, 114, 0);
+                                    background: linear-gradient(270deg, #3772ff, #9757d7);
                                       font-family: FontAwesomeSolid;
                                     "
                                   >
                                     
-                                  </div>
-                                  <div class="Features_subtitle__2LBGU">
-                                    Video Player
-                                  </div>
-                                  <div class="Features_content__1-7NV">
-                                    Play and share your own video files in one
-                                    of many theaters. Support for the majority
-                                    of video files, subtitles and more.
                                   </div>
                                 </div>
                               </div>
@@ -802,29 +781,20 @@
                                 <div
                                   class="programs-item Features_item__iuL0N"
                                   tabindex="-1"
-                                  style="width: 100%; display: inline-block"
+                                  style="width: 100%; display: inline-block; text-align: -webkit-center;"
                                 >
+                                <video width="300" height="240" autoplay loop muted>
+                                  <source src="media/video_6.mp4" type="video/mp4">
+                                </video>
                                   <div
                                     class="Features_icon__1pwH7"
                                     style="
-                                      background-color: rgb(84, 0, 255);
+                                    background: linear-gradient(270deg, #3772ff, #9757d7);
                                       font-family: FontAwesomeSolid;
                                     "
                                   >
-                                    
+                                    
                                   </div>
-                                  <div class="Features_subtitle__2LBGU">
-                                    Movie Rentals
-                                  </div>
-                                  <div class="Features_content__1-7NV">
-                                    Watch more than 100 2D and 3D movies on
-                                    demand. Rent together or watch alone.
-                                  </div>
-                                  <a
-                                    class="button-stroke Features_button__1oSWQ"
-                                    href="#"
-                                    >Browse Catalog</a
-                                  >
                                 </div>
                               </div>
                             </div>
@@ -895,24 +865,19 @@
                                 <div
                                   class="programs-item Features_item__iuL0N"
                                   tabindex="-1"
-                                  style="width: 100%; display: inline-block"
+                                  style="width: 100%; display: inline-block; text-align: -webkit-center;"
                                 >
+                                <video width="300" height="240" autoplay loop muted>
+                                  <source src="media/video_2.mp4" type="video/mp4">
+                                </video>
                                   <div
                                     class="Features_icon__1pwH7"
                                     style="
-                                      background-color: rgb(0, 144, 255);
-                                      font-family: FontAwesomeBrands;
+                                      background: linear-gradient(270deg, #3772ff, #9757d7);
+                                      font-family: FontAwesomeSolid;
                                     "
                                   >
-                                    
-                                  </div>
-                                  <div class="Features_subtitle__2LBGU">
-                                    (Remote) Desktop
-                                  </div>
-                                  <div class="Features_content__1-7NV">
-                                    Use and share your desktop in virtual
-                                    reality. Tons of screen options to optimize
-                                    your experience.
+                                    
                                   </div>
                                 </div>
                               </div>
@@ -928,24 +893,19 @@
                                 <div
                                   class="programs-item Features_item__iuL0N"
                                   tabindex="-1"
-                                  style="width: 100%; display: inline-block"
+                                  style="width: 100%; display: inline-block; text-align: -webkit-center;"
                                 >
+                                <video width="300" height="240" autoplay loop muted>
+                                  <source src="media/video_3.mp4" type="video/mp4">
+                                </video>
                                   <div
                                     class="Features_icon__1pwH7"
                                     style="
-                                      background-color: rgb(255, 114, 0);
+                                    background: linear-gradient(270deg, #3772ff, #9757d7);
                                       font-family: FontAwesomeSolid;
                                     "
                                   >
                                     
-                                  </div>
-                                  <div class="Features_subtitle__2LBGU">
-                                    Video Player
-                                  </div>
-                                  <div class="Features_content__1-7NV">
-                                    Play and share your own video files in one
-                                    of many theaters. Support for the majority
-                                    of video files, subtitles and more.
                                   </div>
                                 </div>
                               </div>
@@ -961,29 +921,20 @@
                                 <div
                                   class="programs-item Features_item__iuL0N"
                                   tabindex="-1"
-                                  style="width: 100%; display: inline-block"
+                                  style="width: 100%; display: inline-block; text-align: -webkit-center;"
                                 >
+                                <video width="300" height="240" autoplay loop muted>
+                                  <source src="media/video_4.mp4" type="video/mp4">
+                                </video>
                                   <div
                                     class="Features_icon__1pwH7"
                                     style="
-                                      background-color: rgb(84, 0, 255);
+                                    background: linear-gradient(270deg, #3772ff, #9757d7);
                                       font-family: FontAwesomeSolid;
                                     "
                                   >
-                                    
+                                    
                                   </div>
-                                  <div class="Features_subtitle__2LBGU">
-                                    Movie Rentals
-                                  </div>
-                                  <div class="Features_content__1-7NV">
-                                    Watch more than 100 2D and 3D movies on
-                                    demand. Rent together or watch alone.
-                                  </div>
-                                  <a
-                                    class="button-stroke Features_button__1oSWQ"
-                                    href="#"
-                                    >Browse Catalog</a
-                                  >
                                 </div>
                               </div>
                             </div>
@@ -1108,7 +1059,7 @@
         </div>
         <!-- End section gaming -->
 
-        <div class="section-bg Social_section__34Zd_">
+        <div class="Social_section__34Zd_">
           <div class="Social_background__32Hvq"></div>
           <div class="Social_m_gallery__g5naF">
             <div class="animated fadeInUp" style="animation-duration: 1s">
@@ -1252,192 +1203,84 @@
               </div>
             </div>
           </div>
-          <!-- card group -->
+              <!-- card group -->
           <div class="row g-4 marquee">
-            <div class="marquee-content">
-              <div class="col marquee-item">
-                <div class="card bg-dark text-white">
-                  <img
-                    src="images/small/Picture1.png"
-                    class="card-img"
-                    alt="..."
-                  />
-                  <div class="card-img-overlay">
-                    <h5 class="card-title">Name of player</h5>
+                <div class="marquee-content">
+                <div class="col marquee-item">
+                  <div class="card bg-dark text-white">
+                    <img
+                      src="images/small/Picture3.png"
+                      class="card-img"
+                      alt="..."
+                    />
+                    <div class="card-img-overlay">
+                      <h5 class="card-title">Name of player</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col marquee-item">
+                  <div class="card bg-dark text-white">
+                    <img
+                      src="images/small/Picture4.png"
+                      class="card-img"
+                      alt="..."
+                    />
+                    <div class="card-img-overlay">
+                      <h5 class="card-title">Name of player</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col marquee-item">
+                  <div class="card bg-dark text-white">
+                    <img
+                      src="images/small/Picture5.png"
+                      class="card-img"
+                      alt="..."
+                    />
+                    <div class="card-img-overlay">
+                      <h5 class="card-title">Name of player</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col marquee-item">
+                  <div class="card bg-dark text-white">
+                    <img
+                      src="images/small/Picture6.png"
+                      class="card-img"
+                      alt="..."
+                    />
+                    <div class="card-img-overlay">
+                      <h5 class="card-title">Name of player</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col marquee-item">
+                  <div class="card bg-dark text-white">
+                    <img
+                      src="images/small/Picture3.png"
+                      class="card-img"
+                      alt="..."
+                    />
+                    <div class="card-img-overlay">
+                      <h5 class="card-title">Name of player</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col marquee-item">
+                  <div class="card bg-dark text-white">
+                    <img
+                      src="images/small/Picture4.png"
+                      class="card-img"
+                      alt="..."
+                    />
+                    <div class="card-img-overlay">
+                      <h5 class="card-title">Name of player</h5>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col marquee-item">
-                <div class="card bg-dark text-white">
-                  <img
-                    src="images/small/Picture2.png"
-                    class="card-img"
-                    alt="..."
-                  />
-                  <div class="card-img-overlay">
-                    <h5 class="card-title">Name of player</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col marquee-item">
-                <div class="card bg-dark text-white">
-                  <img
-                    src="images/small/Picture3.png"
-                    class="card-img"
-                    alt="..."
-                  />
-                  <div class="card-img-overlay">
-                    <h5 class="card-title">Name of player</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col marquee-item">
-                <div class="card bg-dark text-white">
-                  <img
-                    src="images/small/Picture4.png"
-                    class="card-img"
-                    alt="..."
-                  />
-                  <div class="card-img-overlay">
-                    <h5 class="card-title">Name of player</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col marquee-item">
-                <div class="card bg-dark text-white">
-                  <img
-                    src="images/small/Picture5.png"
-                    class="card-img"
-                    alt="..."
-                  />
-                  <div class="card-img-overlay">
-                    <h5 class="card-title">Name of player</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col marquee-item">
-                <div class="card bg-dark text-white">
-                  <img
-                    src="images/small/Picture6.png"
-                    class="card-img"
-                    alt="..."
-                  />
-                  <div class="card-img-overlay">
-                    <h5 class="card-title">Name of player</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col marquee-item">
-                <div class="card bg-dark text-white">
-                  <img
-                    src="images/small/Picture7.png"
-                    class="card-img"
-                    alt="..."
-                  />
-                  <div class="card-img-overlay">
-                    <h5 class="card-title">Name of player</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col marquee-item">
-                <div class="card bg-dark text-white">
-                  <img
-                    src="images/small/Picture8.png"
-                    class="card-img"
-                    alt="..."
-                  />
-                  <div class="card-img-overlay">
-                    <h5 class="card-title">Name of player</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col marquee-item">
-                <div class="card bg-dark text-white">
-                  <img
-                    src="images/small/Picture9.png"
-                    class="card-img"
-                    alt="..."
-                  />
-                  <div class="card-img-overlay">
-                    <h5 class="card-title">Name of player</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col marquee-item">
-                <div class="card bg-dark text-white">
-                  <img
-                    src="images/small/Picture10.png"
-                    class="card-img"
-                    alt="..."
-                  />
-                  <div class="card-img-overlay">
-                    <h5 class="card-title">Name of player</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col marquee-item">
-                <div class="card bg-dark text-white">
-                  <img
-                    src="images/small/Picture11.png"
-                    class="card-img"
-                    alt="..."
-                  />
-                  <div class="card-img-overlay">
-                    <h5 class="card-title">Name of player</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col marquee-item">
-                <div class="card bg-dark text-white">
-                  <img
-                    src="images/small/Picture12.png"
-                    class="card-img"
-                    alt="..."
-                  />
-                  <div class="card-img-overlay">
-                    <h5 class="card-title">Name of player</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col marquee-item">
-                <div class="card bg-dark text-white">
-                  <img
-                    src="images/small/Picture13.png"
-                    class="card-img"
-                    alt="..."
-                  />
-                  <div class="card-img-overlay">
-                    <h5 class="card-title">Name of player</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col marquee-item">
-                <div class="card bg-dark text-white">
-                  <img
-                    src="images/small/Picture14.png"
-                    class="card-img"
-                    alt="..."
-                  />
-                  <div class="card-img-overlay">
-                    <h5 class="card-title">Name of player</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col marquee-item">
-                <div class="card bg-dark text-white">
-                  <img
-                    src="images/small/Picture15.png"
-                    class="card-img"
-                    alt="..."
-                  />
-                  <div class="card-img-overlay">
-                    <h5 class="card-title">Name of player</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End card group -->
+        </div>
+            <!-- End card group -->
         </div>
 
         <!-- Section How to use -->
@@ -1569,43 +1412,16 @@
                         d="M17.884,22.35A1.464,1.464,0,0,0,16.436,23.8a1.445,1.445,0,0,0,1.449,1.425A1.425,1.425,0,0,0,19.309,23.8a1.444,1.444,0,0,0-1.425-1.447Zm-6.243,0A1.463,1.463,0,0,0,10.194,23.8a1.444,1.444,0,0,0,1.447,1.425A1.425,1.425,0,0,0,13.066,23.8a1.444,1.444,0,0,0-1.425-1.447Z"
                         transform="translate(-9.183 -13.65)"
                       ></path>
-                    </g></svg
-                ></a>
+                    </g>
+                    </svg>
+              </a>
               </div>
               <a
                 class="button Footer_button__31KA4"
                 href="#"
                 target="_blank"
-                rel="noreferrer"
-                >
-                <!-- <svg
-                  class="Footer_comicon__1Gxpr"
-                  width="26"
-                  height="26"
-                  viewBox="0 0 16 16"
-                >
-                  <defs>
-                    <clipPath id="clip-path">
-                      <rect
-                        id="Rectangle_1201"
-                        width="27"
-                        height="21"
-                        transform="translate(0 0)"
-                      ></rect>
-                    </clipPath>
-                  </defs>
-                  <g
-                    transform="translate(0 2), scale(0.5)"
-                    clip-path="url(#clip-path)"
-                  >
-                    <path
-                      id="Vector"
-                      d="M21.784,2.038A21.22,21.22,0,0,0,16.546.413a.08.08,0,0,0-.084.04,14.781,14.781,0,0,0-.652,1.34,19.59,19.59,0,0,0-5.883,0A13.557,13.557,0,0,0,9.264.453.083.083,0,0,0,9.18.413,21.161,21.161,0,0,0,3.942,2.038a.075.075,0,0,0-.034.03,21.718,21.718,0,0,0-3.8,14.647.088.088,0,0,0,.033.06,21.339,21.339,0,0,0,6.426,3.248.083.083,0,0,0,.09-.03A15.252,15.252,0,0,0,7.97,17.855a.081.081,0,0,0-.045-.113,14.053,14.053,0,0,1-2.007-.957.083.083,0,0,1-.008-.137c.135-.1.27-.206.4-.312a.08.08,0,0,1,.083-.011,15.218,15.218,0,0,0,12.932,0,.079.079,0,0,1,.084.01c.129.106.264.212.4.313a.082.082,0,0,1-.007.137,13.187,13.187,0,0,1-2.008.956.082.082,0,0,0-.044.114,17.125,17.125,0,0,0,1.314,2.137.082.082,0,0,0,.09.031,21.268,21.268,0,0,0,6.436-3.248.083.083,0,0,0,.033-.059,21.575,21.575,0,0,0-3.8-14.647A.065.065,0,0,0,21.784,2.038ZM8.6,13.791A2.473,2.473,0,0,1,6.286,11.2,2.46,2.46,0,0,1,8.6,8.6,2.446,2.446,0,0,1,10.912,11.2,2.46,2.46,0,0,1,8.6,13.791Zm8.551,0A2.473,2.473,0,0,1,14.837,11.2,2.46,2.46,0,0,1,17.15,8.6,2.446,2.446,0,0,1,19.462,11.2,2.453,2.453,0,0,1,17.15,13.791Z"
-                      transform="translate(0.678 0.804)"
-                    ></path>
-                  </g></svg> -->
-                  Go To Our Website</a
-              >
+                rel="noreferrer">
+                  Go To Our Website</a>
             </div>
             <div class="Footer_col__1VR2s">
               <div class="Footer_category__3prEp">newsletter</div>
